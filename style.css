@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: gradientChange 15s ease infinite;
+    background: linear-gradient(270deg, #ff5f6d, #ffc371, #6a82fb, #fc5c7d, #ff9a00, #00c6ff);
+    background-size: 400% 400%; /* For smooth transitions */
+}
+
+@keyframes gradientChange {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 0% 100%; }
+    75% { background-position: 100% 100%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 700px;
+    padding: 30px 30px;
+    background-color: rgba(238, 241, 255, 0.9); /* Slightly transparent for blending */
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.stats span {
+    font-weight: 600;
+    color: #e81c43;
+}
+
+#quote {
+    text-align: justify;
+    margin: 50px 0 30px 0;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 5px;
+    font-size: 16px;
+}
+
+button {
+    float: right;
+    margin-top: 20px;
+    background-color: #44b267;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Hide the "Stop Test" button by default */
+#stop-test {
+    display: none;
+}
+
+.result {
+    margin-top: 40px;
+    display: none;
+}
+
+.result h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper span {
+    font-weight: 600;
+}
+
+.success {
+    color: #44b267;
+}
+
+.fail {
+    
+    color: #e81c43;
+}
